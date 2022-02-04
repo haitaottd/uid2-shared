@@ -14,3 +14,5 @@ echo 'enclave-attestation-api: build & install'
 pushd enclave-attestation-api-java || exit
 mvn package && mvn install:install-file -Dfile="./target/$ARTIFACT_ID-$VERSION.jar" -DgroupId="$GROUP_ID" -DartifactId="$ARTIFACT_ID" -Dpackaging=jar -Dversion="$VERSION"
 popd
+
+echo done
